@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio suma</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <h1>Ejercicio suma de inputs</h1>
+    <div>
+        <input id="input1" type="number" class="form-control ml-2" value="0">
+        <input id="input2" type="number" class="form-control ml-2 mt-2" value="0">
+        <button id="botonCalcular" class="btn btn-success ml-2 mt-3">Calcular</button>
+    </div>
+
+
+
+    <script>
+        console.log("Mensaje por consola")
+
+
+        const botonCalcular = document.querySelector("#botonCalcular")
+
+        botonCalcular.addEventListener("click", calculo)
+
+        function calculo(){
+            console.log("Has hecho click para calcular")
+             const input1 = document.querySelector("#input1")
+             const valorInput1 = input1.value
+             const input2 = document.querySelector("#input2")
+             const valorInput2 = input2.value
+
+             const resultado = parseFloat(valorInput1) + parseFloat(valorInput2)
+
+            console.log("El resultado de la suma es :", resultado)
+        }
+
+    </script>
+</body>
+</html>
